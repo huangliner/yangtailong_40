@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//一
+			var arr='48294746';
+			arr=arr.split('');
+			var sum=arr.sort(function  (a,b) {
+					return b-a;
+				})[0]
+			alert(sum);
+		//二	
+			var countryList=["America","Greece","Britain","Canada","China","Egypt"];
+			var a=/a/ig;
+			var b=countryList.join('');
+			var c=b.match(a);
+			var d=c.length;
+			alert(d);
+			
+		</script>
+	</body>
+</html>
