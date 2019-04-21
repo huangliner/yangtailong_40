@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<script>
+			var ing=[2,5,'3','a',[1],3];
+			var arr=0;
+
+			ing.forEach(function(value){
+				if (typeof(value)=="number") {
+					arr+=value;
+				}
+				if (value.constructor===Array) {
+					value.forEach(function(values){
+						if (typeof(values)=="number") {
+							arr+=values;
+						}
+					})
+				}
+			})
+
+			alert(arr);
+		</script>
+	</body>
+</html>
