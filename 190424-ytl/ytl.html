@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--第一题：-->
+		<script>
+			var a=[2,4,{x:2,y:3},true,[5,6]];
+				alert(a.every(function(ing){
+					return typeof(ing)==Number;
+				}))
+		</script>
+		
+		<!--第二题：-->
+			<script>
+				var num=[1,6,3,9];
+				alert(num.every(function(eng){
+					if (eng>2&&eng<10) 
+						return true
+					else
+						return false
+				}));
+			</script>
+			
+		<!--第三题:-->
+		<script>
+			var a=[2,4,{x:2,y:3},true,[5,6]];
+				alert(a.some(function(arr){
+					return typeof(arr)!=Number;
+				}));
+		</script>
+		
+	
+	</body>
+</html>
