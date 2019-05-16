@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#ul{
+				width: 500px;
+				height: 170px;
+				border: 1px solid palevioletred;
+			}
+			#ul li{
+				list-style: none;
+				display: block;
+				float: left;
+				width: 100px;
+				height: 30px;	
+				text-align: center;
+				line-height: 30px;
+				background: gainsboro;
+				border-bottom: 1px solid palevioletred;
+			}
+			#ul .gz{
+				background: brown;
+				border-bottom: 3px solid palevioletred;
+			}
+			#ul .gg{
+				background: greenyellow;
+				border-bottom: 0px solid palevioletred;
+			}
+			#ul li a{
+				text-decoration: none;
+				color: #F47920;
+			}
+			div{
+				position: absolute;
+				top: 30px;
+				width: 500px;
+				height: 170px;
+				
+			}
+			.divs{
+				display: block;
+			}
+			.div{
+				display: none;
+			}
+			div p{
+				
+				width: 250px;
+				height: 85px;
+
+				float: left;
+				text-align: center;
+				line-height: 85px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="ul">
+			<li class="gg"><a href="#">公告</a></li>
+			<li class="gz"><a href="#">规则</a></li>
+			<li><a href="#">论坛</a></li>
+			<li><a href="#">安全</a></li>
+			<li><a href="#">公益</a></li>
+			
+			<div class="divs">
+				
+				<p>数据七夕:金牛爱送玫瑰</p>
+				<p>10万家店60万新品</p>
+				<p>阿里打造"互联网监管"</p>
+				<p>全球品大网上时装周</p>
+				
+			</div>
+			<div class="div">
+				
+				<p>"全额返现"要管控啦</p>
+				<p>炒信规则调整意见反馈</p>
+				<p>淘宝新规发布汇总((7月)</p>
+				<p>质量相关规则近期变更</p>
+				
+			</div>
+			<div class="div">
+				
+				<p>接次文件，毁了一家店</p>
+				<p>新版阿里110上线了</p>
+				<p>联号安全神器阿里钱盾</p>
+				<p>卖家学违禁通免被处罚</p>
+				
+			</div>
+			<div class="div">
+				
+				<p>数据七夕:金牛爱送玫瑰</p>
+				<p>10万家店60万新品</p>
+				<p>阿里打造"互联网监管"</p>
+				<p>全球品大网上时装周</p>
+				
+			</div>
+			<div class="div">
+				
+				<p>"全额返现"要管控啦</p>
+				<p>炒信规则调整意见反馈</p>
+				<p>淘宝新规发布汇总((7月)</p>
+				<p>质量相关规则近期变更</p>
+				
+			</div>
+		</ul>
+		
+		
+		<script>
+			window.onload=function(){
+				var li=document.getElementsByTagName('li');
+				var odiv=document.getElementsByTagName('div');
+				for (var i = 0; i < li.length; i++) {
+					li[i].index=i;
+					li[i].onclick=function() {
+						for (var i=0;i<li.length;i++){
+							li[i].className="backs";
+						}
+						li[this.index].className="back";
+						for (var j=0;j<odiv.length;j++) {
+							odiv[j].className="div";
+						}
+						odiv[this.index].className="divs";
+					};
+				};
+			};
+			
+		</script>
+		
+		
+	</body>
+</html>
